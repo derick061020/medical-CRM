@@ -27,7 +27,6 @@ return new class extends Migration
             $table->string('instagram')->nullable();
             $table->string('twitter')->nullable();
             $table->enum('clinic_type', ['prestadora', 'proveedora'])->default('prestadora');
-            $table->foreignId('clinic_type_id')->constrained()->onDelete('restrict');
             $table->timestamps();
         });
     }
